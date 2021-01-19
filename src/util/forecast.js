@@ -8,7 +8,7 @@ const forecast = (latitude,longitude, callback) => {
                 callback('unable to connect to weather service', undefined)
             } else if (body.error){
                 callback('Unable to find location. Try another search.', undefined)
-            } else {callback(undefined, body.current.weather_descriptions + ' It is currently ' +  body.current.temperature + ' degress out. There is a ' + body.current.precip + '% chance of rain.')
+            } else {callback(undefined,'the weather code of this country is ' + body.current.weather+code + body.current.weather_descriptions + ' It is currently ' +  body.current.temperature + ' degress out. There is a ' + body.current.precip + '% chance of rain.')
             }   
           
            
